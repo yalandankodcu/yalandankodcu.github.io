@@ -32,9 +32,9 @@ function handleSubmit(event) {
   // console.log(event.target[0]);
   // console.log(event.target.beraberlik.value);
   console.log(winOdd, drawOdd, betAmount, drawBetAmount, winBetAmount, winningAmount);
-  winBet.innerText = winBetAmount;
-  drawBet.innerText = drawBetAmount;
-  winning.innerText = winningAmount;
+  winBet.innerText = `${winBetAmount} TL`;
+  drawBet.innerText = `${drawBetAmount} TL`;
+  winning.innerText = `${winningAmount} TL`;
 }
 
 /** EVENT LISTENERS */
