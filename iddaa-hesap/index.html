@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>İddaa Hesaplamaları</title>
+</head>
+<body>
+  <main class="main-container">
+    <h1 class="jumbo-text-1 text-center">AYRI BAHİSLERİ ORTAK BAHİSE DÖNÜŞTÜRME AYGITI</h1>
+
+    <form>
+    <div class="form-container">
+
+      <div id="container_1">
+      <!-- COMBINED BET -->
+      <div id="combined_bet" class="bet">
+        <div class="jumbo-text-2 text-center">Ortak Bahis</div>
+
+        <div class="bet-line input">
+          <label class="label large-label text-right">Para (&#8378;):</label>          
+          <input 
+            type="number" 
+            id="bet_amount"
+            name="bet_amount"
+            min="10"
+            step="1"
+          />
+        </div>
+
+        <div class="bet-line output">
+          <div class="label text-right large-label">Oran:</div>
+          <div class="output-value large-label" id="combined_odd"></div>
+        </div>
+
+        <div class="bet-line output">
+          <div class="label text-right large-label">Kazanç (&#8378;):</div>
+          <div class="output-value large-label" id="winning_amount"></div>
+        </div>
+
+        <button type="submit" id="hesapla">Hesapla</button>
+        <button type="reset" id="temizle">Temizle</button>
+
+      </div>
+      </div>
+
+      <div id="container_2">
+
+      <!-- BET #1 -->
+      <div id="bet-1" class="bet">
+        <div class="jumbo-text-2 text-center">Bahis #1</div>
+
+        <div class="bet-line input">
+          <label class="label large-label text-right">Oran:</label>
+          <input 
+            type="number" 
+            id="odd_1"
+            name="odd_1"
+            onChange="setTwoNumberDecimal" 
+            min="1.01"
+            step="0.01" 
+          />
+        </div>
+
+        <div class="bet-line input">
+          <div class="label text-right large-label">Tür:</div>
+          <div class="output-value small-label">Kazanç</div>
+        </div>
+
+        <div class="bet-line output">
+          <div class="label text-right large-label">Para (&#8378;):</div>
+          <div class="output-value large-label" id="bet_amount_1"></div>
+        </div>
+
+      </div>
+
+      <!-- BET #2 -->
+      <div id="bet-2" class="bet">
+        <div class="jumbo-text-2 text-center">Bahis #2</div>
+
+        <div class="bet-line input">
+          <label class="label large-label text-right">Oran:</label>
+          <input 
+            type="number" 
+            id="odd_2"
+            name="odd_2"
+            onChange="setTwoNumberDecimal" 
+            min="1.01"
+            step="0.01" 
+          />
+        </div>
+
+        <div class="bet-line input">
+          <label for="bet_genre_2" class="large-label text-right">Tür:</label>
+          <select id="bet_genre_2">
+            <option value="win">Kazanç</option>
+            <option value="no_bet">İade</option>
+          </select>
+        </div>
+
+        <div class="bet-line output">
+          <div class="label text-right large-label">Para (&#8378;):</div>
+          <div class="output-value large-label" id="bet_amount_2"></div>
+        </div>
+
+      </div>
+
+      <!-- BET #3 -->
+      <div id="bet-3" class="bet">
+        <div class="jumbo-text-2 text-center">Bahis #3</div>
+
+        <div class="bet-line input">
+          <label class="label large-label text-right">Oran:</label>
+          <input 
+            type="number" 
+            id="odd_3"
+            name="odd_3"
+            onChange="setTwoNumberDecimal" 
+            step="0.01" 
+          />
+        </div>
+
+        <div class="bet-line input">
+          <label for="bet_genre_3" class="large-label text-right">Tür:</label>
+          <select id="bet_genre_3">
+            <option value="win">Kazanç</option>
+            <option value="no_bet">İade</option>
+          </select>
+        </div>
+
+        <div class="bet-line output">
+          <div class="label text-right large-label">Para (&#8378;):</div>
+          <div class="output-value large-label" id="bet_amount_3"></div>
+        </div>
+
+      </div>
+      </div>
+
+    </div>
+    </form>
+
+  </main>
+
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
