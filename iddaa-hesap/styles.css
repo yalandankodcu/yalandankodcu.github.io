@@ -11,18 +11,19 @@ html {font-size: 80%;}
 
 body {
   margin: 0;
+  /* padding: 0 auto; */
   background-color: hsl(0, 0%, 98%);
   color: #333;
   font: 100% / normal sans-serif;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 
 main {
   margin: 0 auto;
   padding: 4em 0;
-  width: 90%;
+  /* width: 90%; */
   max-width: 60em;
-  border: 1px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .shrink{
@@ -32,9 +33,19 @@ main {
   transform:scale(0.5); */
 }
 
+form {
+  box-sizing: border-box;
+  padding: 1em;
+  border-radius: 1em;
+  border: 4px solid hsl(0, 0%, 90%);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .form-container {
   display: flex;
   flex-flow: column;
+  /* border: 2px solid yellow; */
 }
 
 #container_1, 
@@ -42,6 +53,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: start;
+  /* border: 1px solid salmon; */
 }
 
 .bet {
@@ -91,15 +103,6 @@ div
   border-radius: 1em;
   background-color: hsl(0, 0%, 100%);
   border: 4px solid hsl(0, 0%, 90%);
-}
-
-form {
-  box-sizing: border-box;
-  padding: 2em;
-  border-radius: 1em;
-  border: 4px solid hsl(0, 0%, 90%);
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .bet_amount {
