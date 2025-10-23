@@ -142,6 +142,8 @@ a:active {
     color: var(--LINK-ACTIVE);
 }
 
+.disabled_link {}
+
 /* || HEADER */
 
 .header {
